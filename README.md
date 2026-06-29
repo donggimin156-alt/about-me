@@ -10,13 +10,30 @@
 
 ### [1차 프로젝트 — HelpyChat UI 테스트 자동화](https://github.com/donggimin156-alt/helpychat-qa)
 
-Selenium + Page Object Model 기반 E2E 테스트 자동화  
-Jenkins CI/CD · Allure 리포트 · Python pytest
+Selenium + Page Object Model(POM) 기반 E2E UI 테스트 자동화
+
+| 구분 | 내용 |
+|---|---|
+| **테스트 도구** | Python · pytest · Selenium WebDriver |
+| **CI/CD** | GitLab CI (test → deploy → notify 3단계 파이프라인) |
+| **리포트** | Allure Report → GitLab Pages 자동 배포 |
+| **이슈 관리** | Jira 연동 (pytest-jira 플러그인) |
+| **알림** | Discord Webhook (빌드 성공·실패 자동 알림) |
+
+---
 
 ### [2차 프로젝트 — HelpyChat API 테스트 자동화](https://github.com/donggimin156-alt/Helpy_API)
 
-pytest + requests 기반 REST API 기능 테스트 + JMeter 성능 테스트  
-Jenkins CI/CD · Allure 리포트 · Docker · Python
+pytest + requests 기반 REST API 기능 테스트 + JMeter 성능 테스트 자동화
+
+| 구분 | 내용 |
+|---|---|
+| **테스트 도구** | Python · pytest · requests · JMeter |
+| **CI/CD** | Jenkins (Declarative Pipeline) |
+| **컨테이너** | Docker (테스트 환경 격리, JMeter 비GUI 실행) |
+| **코드 품질** | ruff (포맷 검사 + 린트) |
+| **리포트** | Allure Report (기능 테스트) · JMeter HTML Report (성능 테스트) |
+| **알림** | Discord Notifier Plugin (빌드 성공·실패 자동 알림) |
 
 ---
 
